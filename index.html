@@ -18,6 +18,9 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
 
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" />
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" />
+
 </head>
 <body>
     <header id="header">
@@ -60,7 +63,55 @@
     </header>
     <main id="main">
         <aside class="sidebar">
-            <div class="sidebar-content">
+            <div id="sidebar-content" class="sidebar-content">
+                <a href="#" class="scenario-btn active">
+                    <span class="scenario-icon">S<span>1</span></span>
+                    <span>Object with Negligible Length</span>
+                    <div class="scenario-hover-btn">
+                        <span class="scenario-icon">S<span>1</span></span>
+                        <span>Object with Negligible Length</span>
+                    </div>
+                </a>
+                <a href="#" class="scenario-btn">
+                    <span class="scenario-icon">S<span>2</span></span>
+                    <span>Problems on Object with Certain Length</span>
+                    <div class="scenario-hover-btn">
+                        <span class="scenario-icon">S<span>2</span></span>
+                        <span>Problems on Object with Certain Length</span>
+                    </div>
+                </a>
+                <a href="#" class="scenario-btn">
+                    <span class="scenario-icon">S<span>3</span></span>
+                    <span>Two Trains are travelling towards north</span>
+                    <div class="scenario-hover-btn">
+                        <span class="scenario-icon">S<span>3</span></span>
+                        <span>Two Trains are travelling towards north</span>
+                    </div>
+                </a>
+                <a href="#" class="scenario-btn">
+                    <span class="scenario-icon">S<span>4</span></span>
+                    <span>Two Trains are travelling towards north</span>
+                    <div class="scenario-hover-btn">
+                        <span class="scenario-icon">S<span>4</span></span>
+                        <span>Two Trains are travelling towards north</span>
+                    </div>
+                </a>
+                <a href="#" class="scenario-btn">
+                    <span class="scenario-icon">S<span>5</span></span>
+                    <span>Train and a person moving away</span>
+                    <div class="scenario-hover-btn">
+                        <span class="scenario-icon">S<span>5</span></span>
+                        <span>Train and a person moving away</span>
+                    </div>
+                </a>
+                <a href="#" class="scenario-btn">
+                    <span class="scenario-icon">S<span>6</span></span>
+                    <span>Train and a person moving away</span>
+                    <div class="scenario-hover-btn">
+                        <span class="scenario-icon">S<span>6</span></span>
+                        <span>Train and a person moving away</span>
+                    </div>
+                </a>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita officiis porro natus quos optio eum cumque. Porro rem animi facilis aperiam consequuntur placeat optio doloribus, cum aspernatur nobis expedita.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita officiis porro natus quos optio eum cumque. Porro rem animi facilis aperiam consequuntur placeat optio doloribus, cum aspernatur nobis expedita.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita officiis porro natus quos optio eum cumque. Porro rem animi facilis aperiam consequuntur placeat optio doloribus, cum aspernatur nobis expedita.
@@ -73,8 +124,9 @@
         </aside>
         <article>
             <div class="main-content">
-                <h1>Trains Crossing Negligible Length</h1>
-                <h2>Theory:</h2>
+                <h1 class="page-title">Trains Crossing Negligible Length</h1>
+
+                <h2 class="page-subtitle">Theory:</h2>
                 <input type="checkbox" class="read-more-state" id="read-more-theory-state" />
                 <div class="theory-box read-more-wrap">
                     <p>When tackling such problems, it is crucial to understand the relationship between distance, time, and speed. One common formula used is Speed = Distance / Time. For instance, if the problem provides the distance traveled and the time taken, you can calculate the speed by dividing the distance by the time.</p>
@@ -84,10 +136,55 @@
                     </div>
                     <label for="read-more-theory-state" class="theory-read-more-btn read-more-btn"></label>
                 </div>
+
+                <h2 class="page-subtitle">Formula</h2>
+
+                <h2 class="page-subtitle">Example</h2>
+
             </div>
         </article>
     </main>
     <footer id="footer">
     </footer>
+    <script type="text/javascript">
+        (function(){
+            var scenarioBtns = document.querySelectorAll('.scenario-btn');
+            // if(scenarioBtns){
+            //     for (var i = 0; i < scenarioBtns.length; i++) {
+            //         scenarioBtns[i].addEventListener('mouseenter', function(){
+            //          console.log(this)
+            //         });
+            //     }
+            // }
+
+            function updateScenarioBtns(){
+                for (var i = 0; i < scenarioBtns.length; i++) {
+                    var el = scenarioBtns[i];
+                    var top = el.getBoundingClientRect().top;
+                    var hoverBtn = el.querySelector('.scenario-hover-btn');
+                    if(hoverBtn){
+                        hoverBtn.style.top = (top) + 'px';
+                    }
+                    console.log(top)
+                }
+            }
+
+            var sidebarContent = document.getElementById('sidebar-content');
+            if(sidebarContent){
+                sidebarContent.addEventListener('scroll', function(){
+                    updateScenarioBtns();
+                });
+            }
+            window.addEventListener('scroll', function(){
+                updateScenarioBtns();
+            });
+
+            setTimeout(function(){
+                updateScenarioBtns();
+            }, 500);
+
+
+        })();
+    </script>
 </body>
 </html>

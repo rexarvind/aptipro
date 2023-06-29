@@ -124,6 +124,7 @@ body {
 }
 
 
+
 #main {
     display:flex;
     height:100%;
@@ -147,6 +148,72 @@ body {
     left:0;
     height:100%;
     width:100%;
+}
+
+.scenario-btn {
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+    display:block;
+    font-size:14px;
+    font-weight:400;
+    color:#000000;
+    padding:8px;
+    margin-top:4px;
+    margin-bottom:4px;
+    text-decoration:none;
+}
+
+.scenario-btn .scenario-hover-btn {
+    display:none;
+}
+
+.scenario-btn:hover .scenario-hover-btn {
+    display: block;
+    position:fixed;
+    padding:8px;
+    left:0;
+    background-color: rgba(192,213,255,1);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.scenario-btn span,
+.scenario-hover-btn span {
+    pointer-events:none;
+}
+.scenario-btn.active {
+    background:rgba(222,233,255,1);
+}
+.scenario-btn:hover,
+.scenario-hover-btn {
+    background:rgba(192,213,255,1);
+    border-radius:4px;
+}
+
+.scenario-btn .scenario-icon,
+.scenario-hover-btn .scenario-icon {
+    padding:2px;
+    line-height:1;
+    min-width:20px;
+    font-size:14px;
+    font-weight:400;
+    border-radius:5px;
+    display:inline-block;
+    color:rgba(26,81,202,1);
+    background:rgba(203,222,251,1);
+    border: 1px solid rgba(26,81,202,1);
+    font-family:'JetBrains Mono', monospace;
+}
+
+.scenario-btn .scenario-icon span,
+.scenario-hover-btn .scenario-icon span {
+    font-size:8px;
+}
+
+.scenario-btn.active .scenario-icon,
+.scenario-btn:hover .scenario-icon {
+    color:#ffffff;
+    background:rgba(26,81,202,1);
 }
 
 .theory-box {
