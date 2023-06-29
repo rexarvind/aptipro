@@ -1,0 +1,51 @@
+
+.primary-header {
+    background-color:#333333;
+}
+
+.primary-header-container {
+    padding:0 20px;
+    display:flex;
+}
+
+.primary-header .logo {
+    color:#ffffff;
+    line-height:1;
+    font-size:28px;
+    font-weight:800;
+    display:inline-block;
+    padding:10px 10px 9px 10px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+.primary-header-menu {
+    list-style:none;
+    display:flex;
+    margin-bottom:0;
+    padding-left:20px;
+    height:100%;
+}
+.primary-header-menu a {
+    height:100%;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:500;
+    padding-left:10px;
+    align-items:center;
+    padding-right:10px;
+    display:inline-flex;
+    text-decoration:none;
+    font-family:"Roboto", sans-serif;
+}
+
+.primary-header-menu a.sub-menu-btn::after {
+    content:"";
+    width:10px;
+    height:10px;
+    margin-left:8px;
+    display:inline-block;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image:url("../img/icon/arrow-drop-down.png");
+}
