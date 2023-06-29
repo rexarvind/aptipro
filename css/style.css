@@ -89,6 +89,8 @@ body {
 
 .secondary-header {
     display:flex;
+    z-index:2;
+    background-color:#ffffff;
     position:relative;
     justify-content:space-between;
     border-bottom: 1px solid rgba(26,81,202,1);
@@ -166,6 +168,7 @@ body {
 
 .scenario-btn .scenario-hover-btn {
     display:none;
+    z-index:1;
 }
 
 .scenario-btn:hover .scenario-hover-btn {
