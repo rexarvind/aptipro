@@ -152,6 +152,53 @@ body {
     width:100%;
 }
 
+.sidebar-dropdown-title {
+    padding:8px;
+    display:flex;
+    user-select:none;
+    cursor:pointer;
+    position:relative;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.sidebar-dropdown-title span {
+    position:relative;
+}
+
+.sidebar-dropdown-title span::before {
+    content:"";
+    display:block;
+    top:0;
+    left:-8px;
+    bottom:0;
+    width:2px;
+    position:absolute;
+    background-color:rgba(26, 81, 202, 1);
+}
+
+.sidebar-dropdown-title::after {
+    content:"";
+    width:10px;
+    height:7px;
+    background-size:10px;
+    display:inline-block;
+    background-repeat:no-repeat;
+    background-image: url("../img/icon/arrow-down-blue.png");
+}
+
+
+.sidebar-dropdown-content {
+    margin-bottom:8px;
+    background: rgba(242, 243, 245, 1);
+}
+
+
+.sidebar-dropdown-state:checked .sidebar-dropdown-content {
+
+}
+
+
 .scenario-btn {
     text-overflow:ellipsis;
     white-space:nowrap;
@@ -218,6 +265,27 @@ body {
     color:#ffffff;
     background:rgba(26,81,202,1);
 }
+
+
+.sidebar-link-btn {
+    display:block;
+    text-decoration:none;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+    display:block;
+    font-size:14px;
+    font-weight:400;
+    padding:8px;
+    color: rgba(129, 141, 163, 1);
+}
+
+.sidebar-link-btn:hover {
+    color:rgba(26, 81, 202, 1);
+    background: rgba(192, 213, 255, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 
 .theory-box {
     border-radius:5px;
