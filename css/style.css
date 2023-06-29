@@ -8,6 +8,10 @@
     display:flex;
 }
 
+.primary-header-right-col {
+    margin-left:auto;
+}
+
 .primary-header .logo {
     color:#ffffff;
     line-height:1;
@@ -48,4 +52,54 @@
     background-position:center;
     background-repeat:no-repeat;
     background-image:url("../img/icon/arrow-drop-down.png");
+}
+
+.primary-header .notification-btn {
+    height:100%;
+    border:0;
+    position:relative;
+    align-items:center;
+    display:inline-flex;
+    justify-content:center;
+    background:transparent;
+}
+
+
+.primary-header .notification-btn::after {
+    content:"";
+    top:15px;
+    width:5px;
+    right:10px;
+    height:5px;
+    position:absolute;
+    border-radius:9px;
+    display:inline-block;
+    background-color:#FF4C00;
+}
+
+
+.secondary-header {
+    display:flex;
+    border-bottom: 1px solid rgba(26,81,202,1);
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.25);
+}
+
+.secondary-header a {
+    font-size:14px;
+    font-weight:500;
+    padding:9px 25px 9px 25px;
+    align-items:center;
+    display:inline-flex;
+    text-decoration:none;
+    justify-content:center;
+    color:rgba(0,0,0,0.75);
+}
+
+.secondary-header a:hover,
+.secondary-header a.active {
+    background-color:rgba(222,233,255,1);
+}
+.secondary-header a.active {
+    font-weight:700;
+    color:rgba(0,0,0,1);
 }
