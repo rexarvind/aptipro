@@ -9,11 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <link rel="preload" as="style" href="./css/reset.css" />
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="./css/reset.css" />
-
-    <link rel="preload" as="style" href="./css/style.css" />
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
@@ -58,6 +55,7 @@
             <a href="/">Non-Verbal Reasoning</a>
             <a href="/">Logical Reasoning</a>
             <a href="/">Verbal Ability</a>
+            <span></span>
         </div>
     </header>
     <main id="main">
@@ -74,11 +72,22 @@
             </div>
         </aside>
         <article>
-            test
+            <div class="main-content">
+                <h1>Trains Crossing Negligible Length</h1>
+                <h2>Theory:</h2>
+                <input type="checkbox" class="read-more-state" id="read-more-theory-state" />
+                <div class="theory-box read-more-wrap">
+                    <p>When tackling such problems, it is crucial to understand the relationship between distance, time, and speed. One common formula used is Speed = Distance / Time. For instance, if the problem provides the distance traveled and the time taken, you can calculate the speed by dividing the distance by the time.</p>
+                    <div class="read-more-target">
+                        <p>For instance, if the problem provides the distance traveled and the time taken, you can calculate the speed by dividing the distance by the time. Conversely, if the problem requires finding the time taken to cover a given distance at a certain speed, you can rearrange the formula as Time = Distance / Speed. Additionally, problems involving relative speeds of two trains moving in the same or opposite directions may require the use of relative speed formulas. For example, when two trains move in the same direction, the relative speed formula is Relative . When tackling such problems, it is crucial to understand the relationship between distance, time, and speed. One common formula used is Speed = Distance / Time.</p>
+                        <p>For instance, if the problem provides the distance traveled and the time taken, you can calculate the speed by dividing the distance by the time. Conversely, if the problem requires finding the time taken to cover a given distance at a certain speed.When tackling such problems, it is crucial to understand the relationship between distance, time, and speed. One common formula used is Speed = Distance / Time. For instance, if the problem provides the distance traveled and the time taken, you can calculate the speed by dividing the distance by the time.</p>
+                    </div>
+                    <label for="read-more-theory-state" class="theory-read-more-btn read-more-btn"></label>
+                </div>
+            </div>
         </article>
     </main>
-    <footer>
-
+    <footer id="footer">
     </footer>
 </body>
 </html>
